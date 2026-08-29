@@ -1,41 +1,19 @@
-# Material UI
+import type { CSSProperties } from 'react';
 
-Material UI is an open-source React component library that implements Google's Material Design. It includes a comprehensive collection of prebuilt components that are ready for use in production right out of the box.
+/**
+ * Utility style object to visually hide an element while keeping it accessible to screen readers.
+ * Useful for adding accessible labels or instructions that should only be announced by assistive technologies.
+ */
+const visuallyHidden: CSSProperties = {
+  border: 0,
+  clip: 'rect(0 0 0 0)',
+  height: '1px',
+  margin: -1,
+  overflow: 'hidden',
+  padding: 0,
+  position: 'absolute',
+  whiteSpace: 'nowrap',
+  width: '1px',
+};
 
-## Installation
-
-Install the package in your project directory with:
-
-```sh
-// with npm
-npm install @mui/material @emotion/react @emotion/styled
-
-// with yarn
-yarn add @mui/material @emotion/react @emotion/styled
-```
-
-## Usage
-
-Here is a quick example to get you started:
-
-```jsx
-import * as React from 'react';
-import Button from '@mui/material/Button';
-
-function App() {
-  return <Button variant="contained">Hello World</Button>;
-}
-}
-```
-
-## Accessibility
-
-Material UI is committed to accessibility. All components are built with semantic HTML and follow WAI-ARIA guidelines. We encourage contributions that improve keyboard navigation, screen reader support, and contrast ratios.
-
-## Contributing
-
-Read the [contributing guide](/CONTRIBUTING.md) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes.
-
-## License
-
-This project is licensed under the terms of the [MIT license](/LICENSE).
+export default visuallyHidden;
